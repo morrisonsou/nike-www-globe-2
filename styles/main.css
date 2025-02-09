@@ -1,0 +1,203 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Globe container styles */
+.globe-container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.globe {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.globe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Marker styles */
+.marker {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.marker-circle {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.marker-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.marker:hover .marker-circle {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: #000;
+}
+
+.marker.active {
+    z-index: 3;
+}
+
+.marker.active .marker-circle {
+    opacity: 0;
+}
+
+.marker.active .marker-image {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Info panel styles */
+.info-panel {
+    flex: 1;
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 15px;
+    min-height: 400px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.info-panel.fade {
+    opacity: 0;
+}
+
+.info-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.info-panel .location {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-panel .story {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Impact box styles */
+.impact-box {
+    background: #e8f4ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.impact-box h3 {
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+}
+
+/* Profile image styles */
+.profile-image {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+/* Nike swoosh styles */
+.nike-swoosh {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .globe-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .globe {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .globe {
+        width: 300px;
+        height: 300px;
+    }
+}

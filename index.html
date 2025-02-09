@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike WWW - Working Women Worldwide</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Working Women Worldwide</h1>
+            <p>Explore how Nike WWW supports women across the globe</p>
+        </div>
+
+        <div class="globe-container">
+            <div class="globe">
+                <!-- Replace src with your actual globe image -->
+                <img class="globe-image" src="images/globe.jpg" alt="Globe background">
+
+                <!-- Markers - Customize positions as needed -->
+                <div class="marker" style="top: 30%; left: 30%;" data-region="northamerica">
+                    <div class="marker-circle"></div>
+                    <img class="marker-image" src="images/markers/sarah.jpg" alt="Sarah">
+                </div>
+                <div class="marker" style="top: 45%; left: 45%;" data-region="europe">
+                    <div class="marker-circle"></div>
+                    <img class="marker-image" src="images/markers/elena.jpg" alt="Elena">
+                </div>
+                <div class="marker" style="top: 60%; left: 35%;" data-region="africa">
+                    <div class="marker-circle"></div>
+                    <img class="marker-image" src="images/markers/amara.jpg" alt="Amara">
+                </div>
+                <div class="marker" style="top: 40%; left: 70%;" data-region="asia">
+                    <div class="marker-circle"></div>
+                    <img class="marker-image" src="images/markers/min.jpg" alt="Min">
+                </div>
+                <div class="marker" style="top: 70%; left: 25%;" data-region="southamerica">
+                    <div class="marker-circle"></div>
+                    <img class="marker-image" src="images/markers/isabella.jpg" alt="Isabella">
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <h2>Select a location</h2>
+                <p>Click on any marker to learn about working women in that region and how Nike WWW makes a difference.</p>
+            </div>
+        </div>
+
+        <!-- Nike swoosh -->
+        <svg class="nike-swoosh" viewBox="0 0 100 100">
+            <path d="M20 50 Q40 60 80 20" stroke="#000" stroke-width="8" fill="none"/>
+        </svg>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
